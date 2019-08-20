@@ -1,15 +1,31 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
-
+.title{
+  font-size: 25px;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #0035a0;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  /* height: 40vmin; */
+  height: 50vmin;
   pointer-events: none;
+
 }
 
+.name {
+  height: 150px;
+ 
+
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #0035a0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,5 +45,34 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.x-sign {
+  --interval: 1s;
+  display: block;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+}
+
+.glow {
+  box-shadow:
+        0 0 60px 30px #fff,  /* inner white */
+        0 0 100px 60px #f0f, /* middle magenta */
+        0 0 140px 90px #0ff; /* outer cyan */
+}
+
+
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
   }
 }
