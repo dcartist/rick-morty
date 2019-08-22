@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Intro extends Component {
+class Navigation extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Intro extends Component {
     }
 }
 
-export default Intro;
+export default Navigation;
