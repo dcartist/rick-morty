@@ -26,9 +26,10 @@ class App extends Component {
     return (
       <div className="App">
         <Intro></Intro>
-      <Route path="/" exact component={Home}/>
-      {/* <Route path="/show/:name" render={(props)=> <Show setInfo={this.setInfo} {...props} {...this.state} />} /> */}
+      
 
+       <Route path="/home" exact component={Home}/>
+        {/* <Route path="/show/:name" render={(props)=> <Show setInfo={this.setInfo} {...props} {...this.state} />} /> */}
     </div>
     );
   }
