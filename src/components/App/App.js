@@ -25,17 +25,16 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Intro></Intro>
+        
       
-
-       <Route path="/home" exact component={Home}/>
+      <Route path="/home" component={Home}/>
+       <Route path="/" exact component={Intro}/>
         {/* <Route path="/show/:name" render={(props)=> <Show setInfo={this.setInfo} {...props} {...this.state} />} /> */}
     </div>
     );
   }
 
 }
-
 
 
 export default App;

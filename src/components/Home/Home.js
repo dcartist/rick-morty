@@ -5,6 +5,15 @@ class Home extends Component {
         return (
             <div>
                 <p>HOME PAGE</p>
+                <p>
+
+                Instructional
+                </p>
+                <p>
+
+                Single player
+                </p>
+
             </div>
         );
     }
