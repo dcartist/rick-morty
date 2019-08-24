@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link} from "react-router-dom"
 class Home extends Component {
     render() {
         return (
@@ -8,10 +8,11 @@ class Home extends Component {
                 <p>
 
                 Instructional
+                <Link to='/instructions'>instructions</Link>
                 </p>
                 <p>
-
-                Single player
+                <Link to='/quickgame'>Single Battle</Link>
+                Single Battle
                 </p>
 
             </div>
