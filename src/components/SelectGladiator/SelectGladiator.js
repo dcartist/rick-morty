@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './GladiatorSelector.css'
+import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom';
 class SelectGladiator extends Component {
     constructor(props){
@@ -29,8 +30,14 @@ class SelectGladiator extends Component {
     render() {
         const gladiatorInfo = this.state.gladiators.map((info, index) => {
             return (
+                
                 <div key={index}>
+                     <Card>
+            <Card.Body>
+
                     <h2> {info.name}</h2>
+                    <Link to={"/quickgame/" + info._id}><img src={info.image}></img></Link> 
+                    
                     <ul>
                         <li>gender: {info.gender}</li>
                         <li>Origin: {info.origin.name}</li>
@@ -38,7 +45,9 @@ class SelectGladiator extends Component {
                     </ul>
                     <p>SCORE: {info.score}</p>
                     <p>GAMES WON: {info.gameswon}</p>
-                    <Link to={"/quickgame/info/" + info._id}>Select Gladiator</Link> 
+                    <Link to={"/quickgame/" + info._id}><button>Select Gladiator</button></Link> 
+            </Card.Body>
+        </Card>
                 </div>
             )
         });
