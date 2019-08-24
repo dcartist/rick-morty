@@ -31,6 +31,7 @@ class GladiatorListing extends Component {
             return (
                 <div key={index}>
                     <h2> {info.name}</h2>
+                    <img src={info.image}></img>
                     <ul>
                         <li>gender: {info.gender}</li>
                         <li>Origin: {info.origin.name}</li>

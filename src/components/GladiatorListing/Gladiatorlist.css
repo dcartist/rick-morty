@@ -22,3 +22,6 @@ li {
     margin:0;
     padding-left: 0;
 }
+img {
+    border-radius: 50%;
+}
