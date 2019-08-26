@@ -5,7 +5,7 @@ class Weapons extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            weapon = [
+            weapon : [
                 'Alcohol',
                 'Laser',
                 'Bat with Rusty Nails'
@@ -15,12 +15,10 @@ class Weapons extends Component {
     
    
     render() {
+        const weaponslist = this.state.weapon.map((element, index) => <button key={index}>{element}</button>)
         return (
             <div>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                
+              {weaponslist}
             </div>
         );
     }
