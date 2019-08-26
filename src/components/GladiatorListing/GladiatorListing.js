@@ -10,7 +10,8 @@ class GladiatorListing extends Component {
         }
     }
     componentDidMount(){
-        const url = 'http://localhost:8080/api/gladiators';
+        // const url = 'http://localhost:8080/api/gladiators';
+        const url = 'https://quiet-inlet-51385.herokuapp.com/api/gladiators';
         axios
           .get(url)
           .then(response => {
