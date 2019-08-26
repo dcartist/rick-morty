@@ -15,6 +15,7 @@ class App extends Component {
     this.state = {
       user: null,
       gladiator:null,
+      weapon: null,
       score: null
     };
   }

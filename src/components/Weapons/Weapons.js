@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 
 
 class Weapons extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            weapon = [
+                'Alcohol',
+                'Laser',
+                'Bat with Rusty Nails'
+            ]
+        }
+    }
+    
    
     render() {
         return (
