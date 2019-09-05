@@ -6,7 +6,8 @@ import Instructions from '../Instructions/Instructions.js'
 import Quick from '../SingleBattle/SingleBattle.js'
 import GladitorList from '../GladiatorListing/GladiatorListing.js'
 import SelectGladiator from '../SelectGladiator/SelectGladiator.js'
-
+import Battle from '../Battle/Battle.js'
+import SingleBattle from '../SingleBattle/Battle.js'
 import './App.css';
 import {Route, Link, Switch, Redirect} from "react-router-dom";
 
@@ -22,10 +23,10 @@ class App extends Component {
   }
 
   setUserWeapon(userweapon){
-    this.setState({userweapon});
+    this.setState({userweapon: userweapon});
   }
   setUser(user){
-    this.setState({user});
+    this.setState({user: user});
   }
 
   setjobId = (jobId) => {
@@ -43,6 +44,9 @@ class App extends Component {
        <Route path="/instructions" exact component={Instructions}/>
        <Route path="/quickgame" exact component={Quick}/>
        <Route path="/quickgame/:user/:userweapon/gladiators" component={SelectGladiator}/>
+       {/* <Route path="/quickgame/:user/:userweapon/:gladiator/battle" render={{props}=> <Battle setUser={this.User}{...props} {...this.state}/>}> */}
+       <Route path="/quickgame/:user/:userweapon/:gladiator/battle" component={SingleBattle}/>
+       {/* <Route path="/quickgame/:user/:userweapon/:gladiator/battle" render={(props)=> <SingleBattle setUser={this.User} {...props} {...this.state} />}/> */}
        {/* <Route path="/quickgame" exact component={Quick}/> */}
        <Route path="/gladiators" exact component={GladitorList}/>
        {/* <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} /> */}

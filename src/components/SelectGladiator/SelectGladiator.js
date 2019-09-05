@@ -47,7 +47,7 @@ class SelectGladiator extends Component {
                     <p>SCORE: {info.score}</p>
                     <p>GAMES WON: {info.gameswon}</p>
                     {/* <Link to={"/quickgame/" + info._id}><button>Select Gladiator</button></Link>  */}
-                    <Link to={"./" + info._id}><button>Select Gladiator</button></Link> 
+                    <Link to={"./" + info._id+"/battle/"}><button>Select Gladiator</button></Link> 
             </Card.Body>
         </Card>
                 </div>

@@ -40,7 +40,7 @@ class Weapons extends Component {
             <div>
                  {/* <Link to={"/quickgame/" + info._id}><img src={info.image}></img></Link>  */}
                  {/* <Link to={"/quickgame/dcartist/" + this.state.weapon[0].index}>test</Link>  */}
-              {weaponslist}
+              {/* {weaponslist} */}
             </div>
         );
     }

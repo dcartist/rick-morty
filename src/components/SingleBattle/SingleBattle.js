@@ -5,7 +5,7 @@ class SingleBattle extends Component {
     render() {
         return (
             <div>
-                SELECT YOUR GLADITOR
+                SELECT YOUR WEAPON:
                 <WeaponSelection></WeaponSelection>
             {/* <GladiatorSelection></GladiatorSelection> */}
                 
