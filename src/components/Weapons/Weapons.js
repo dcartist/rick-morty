@@ -21,10 +21,7 @@ class Weapons extends Component {
                 {
                     type:'Bat with Rusty Nails',
                     indexNum: 2
-
                 }
-
-                
             ]
             // weapon : [
             //     'Alcohol',
