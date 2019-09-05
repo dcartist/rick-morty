@@ -7,6 +7,7 @@ class Weapons extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            weaponSelected : 20,
             weapon : [
                 {
                     type:'Alcohol',
@@ -32,15 +33,17 @@ class Weapons extends Component {
             // ]
         }
     }
-    
-   
+    componentDidMount(props){
+        
+    }
     render() {
         const weaponslist = this.state.weapon.map((element, index) => <Link to={"/quickgame/dcartist/"+element.indexNum}><button className="weaponButton" key={index}>{element.type}</button></Link>)
         return (
             <div>
                  {/* <Link to={"/quickgame/" + info._id}><img src={info.image}></img></Link>  */}
-                 {/* <Link to={"/quickgame/dcartist/" + this.state.weapon[0].index}>test</Link>  */}
+                 {/* <Lin   k to={"/quickgame/dcartist/" + this.state.weapon[0].index}>test</Link>  */}
               {/* {weaponslist} */}
+              {this.state.weapon[this.props.weaponSelected].type} is the weapon selected
             </div>
         );
     }
