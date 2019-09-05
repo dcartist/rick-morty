@@ -15,15 +15,23 @@ class App extends Component {
     this.state = {
       user: null,
       gladiator:null,
-      weapon: null,
+      userweapon: null,
       score: null
     };
   }
 
-  
-  setInfo(name){
-    this.setState({ name: name});
+  setUserWeapon(userweapon){
+    this.setState({userweapon});
   }
+  setUser(user){
+    this.setState({user});
+  }
+
+  setjobId = (jobId) => {
+    this.setState({jobId: jobId});
+  }
+  
+ 
   render(){
     return (
       <div className="App">
@@ -33,7 +41,13 @@ class App extends Component {
        <Route path="/" exact component={Intro}/>
        <Route path="/instructions" exact component={Instructions}/>
        <Route path="/quickgame" exact component={Quick}/>
+       {/* <Route path="/quickgame" exact component={Quick}/> */}
        <Route path="/gladiators" exact component={GladitorList}/>
+{/*        
+       <Route path="/quickgame/:user" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} />
+       <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} />
+ */}
+
        {/* <Route path="/price/:currency" render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} /> */}
         {/* <Route path="/show/:name" render={(props)=> <Show setInfo={this.setInfo} {...props} {...this.state} />} /> */}
     </div>
