@@ -5,6 +5,7 @@ import Intro from '../Intro/Intro.js'
 import Instructions from '../Instructions/Instructions.js'
 import Quick from '../SingleBattle/SingleBattle.js'
 import GladitorList from '../GladiatorListing/GladiatorListing.js'
+import SelectGladiator from '../SelectGladiator/SelectGladiator.js'
 
 import './App.css';
 import {Route, Link, Switch, Redirect} from "react-router-dom";
@@ -41,7 +42,7 @@ class App extends Component {
        <Route path="/" exact component={Intro}/>
        <Route path="/instructions" exact component={Instructions}/>
        <Route path="/quickgame" exact component={Quick}/>
-       <Route path="/quickgame/:user/:userweapon/gladiators" exact component={GladitorList}/>
+       <Route path="/quickgame/:user/:userweapon/gladiators" component={SelectGladiator}/>
        {/* <Route path="/quickgame" exact component={Quick}/> */}
        <Route path="/gladiators" exact component={GladitorList}/>
        {/* <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} /> */}
