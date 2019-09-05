@@ -10,16 +10,16 @@ class Weapons extends Component {
             weapon : [
                 {
                     type:'Alcohol',
-                    index: 0
+                    indexNum: 0
                 }
                 ,
                 {
                     type:'Laser',
-                    index: 1
+                    indexNum: 1
                 },
                 {
                     type:'Bat with Rusty Nails',
-                    index: 2
+                    indexNum: 2
 
                 }
 
@@ -35,16 +35,14 @@ class Weapons extends Component {
     
    
     render() {
-        const weaponslist = this.state.weapon.map((element, index) => <button className="weaponButton" key={index}>{element.type}</button>)
+        const weaponslist = this.state.weapon.map((element, index) => <Link to={"/quickgame/dcartist/"+element.indexNum}><button className="weaponButton" key={index}>{element.type}</button></Link>)
         return (
             <div>
                  {/* <Link to={"/quickgame/" + info._id}><img src={info.image}></img></Link>  */}
-                 <Link to={"/quickgame/" + this.state.weapon[0].index}>test</Link> 
+                 {/* <Link to={"/quickgame/dcartist/" + this.state.weapon[0].index}>test</Link>  */}
               {weaponslist}
-              {this.state.weapon[0].index}
             </div>
         );
     }
 }
-
 export default Weapons;

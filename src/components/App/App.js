@@ -43,6 +43,8 @@ class App extends Component {
        <Route path="/quickgame" exact component={Quick}/>
        {/* <Route path="/quickgame" exact component={Quick}/> */}
        <Route path="/gladiators" exact component={GladitorList}/>
+       {/* <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} /> */}
+
 {/*        
        <Route path="/quickgame/:user" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} />
        <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} />
