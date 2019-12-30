@@ -18,10 +18,10 @@ class SelectGladiator extends Component {
           .then(response => {
             this.setState(
               prevState => ({
-                gladiators: response.data[0].results
+                gladiators: response.data
               }),
             //   _ => console.log("get all getting data")
-            //   _ => console.log(response.data[0].results[1])
+              // _ => console.log(response.data)
               _ => console.log(this.state.gladiators)
             );
           }).catch(err => {

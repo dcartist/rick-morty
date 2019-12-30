@@ -16,7 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       user: null,
-      gladiator:null,
+      gladiatorInfo:null,
       userweapon: null,
       score: null
     };
@@ -28,6 +28,9 @@ class App extends Component {
   setUser(user){
     this.setState({user: user});
   }
+  // setGladiator(gladiator){
+  //   this.setState({gladiatorInfo: gladiatorInfo});
+  // }
 
   setjobId = (jobId) => {
     this.setState({jobId: jobId});
@@ -37,15 +40,25 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-      <Route path="/home" component={Home}/>
+       <Route path="/home" component={Home}/> {/* Home component*/}
        <Route path="/" exact component={Intro}/>
+       {/* Instructions to the game */}
        <Route path="/instructions" exact component={Instructions}/>
+       {/* Quick Game Component >> Enters into selecting weapon */}
+
        <Route path="/quickgame" exact component={Quick}/>
+       {/* Quick game gladiator selection */}
        <Route path="/quickgame/:user/:userweapon/gladiators" component={SelectGladiator}/>
+
+
        {/* <Route path="/quickgame/:user/:userweapon/:gladiator/battle" render={{props}=> <Battle setUser={this.User}{...props} {...this.state}/>}> */}
+       {/* <Route path="/quickgame/:user/:userweapon/:gladiator/battle" render={(props)=> <SingleBattle setUser={this.gladiatorInfo} {...props} {...this.state} />}/> */}
        <Route path="/quickgame/:user/:userweapon/:gladiator/battle" component={SingleBattle}/>
        {/* <Route path="/quickgame/:user/:userweapon/:gladiator/battle" render={(props)=> <SingleBattle setUser={this.User} {...props} {...this.state} />}/> */}
        {/* <Route path="/quickgame" exact component={Quick}/> */}
+
+
+       {/* list gladiators stats */}
        <Route path="/gladiators" exact component={GladitorList}/>
        {/* <Route path="/quickgame/:user/:userweapon" exact render={(props)=> <Price setPrice={this.setPrice} {...props} {...this.state} />} /> */}
 
